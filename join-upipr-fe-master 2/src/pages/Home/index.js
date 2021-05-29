@@ -10,7 +10,7 @@ function HomePage() {
 
   const history = useHistory();
   const [data,setData] = React.useState([])
-  const [active, setActive] = React.useState(0);
+  const [active, setActive] = React.useState(-1);
   const [q,setQ] = React.useState("")
   const [load,setLoad] = React.useState(false)
   const [err, setErr] = React.useState(false)
@@ -42,8 +42,9 @@ const keyMovement = (e)=>{
               break;
     case 38: setActive( prev => prev -1)
               break;
-    case 13: let info = data[active].name
-              history.push(`/person/${info}`)
+    case 13: let info ;
+              active > -1 ? info = data[active].name : info = null;
+              info?history.push(`/person/${info}`):history.push("/ungabunga")
               break;
     default:
       break;

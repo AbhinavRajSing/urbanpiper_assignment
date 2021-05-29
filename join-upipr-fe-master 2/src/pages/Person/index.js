@@ -1,12 +1,14 @@
 import axios from 'axios';
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { useHistory, useParams } from 'react-router-dom';
 import './index.css';
 
 function Person() {
   const [data,setData] = React.useState({})
   let {name} = useParams()
-  console.log(name)
+  // console.log(name)
+
+  let history = useHistory()
 
   React.useEffect(()=>{
     fetchData()
@@ -26,6 +28,7 @@ function Person() {
           <h1 className="datas">Hair Color: {data.hair_color}</h1>
           <h1 className="datas">Height:  {data.height}</h1>
           <h1 className="datas">Mass: {data.mass}</h1>
+          <button onClick={()=>history.push("/")}>Go Back</button>
         </div>
     </div>
     
