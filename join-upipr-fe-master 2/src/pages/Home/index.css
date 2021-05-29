@@ -9,6 +9,7 @@
 
     background: #2d2f30;
     color: #f2f2f2;
+    /* position: absolute; */
 }
 
 .logo {
@@ -18,4 +19,13 @@
 
 .logo img {
     width: 200px;
+}
+.inputicons{
+    /* position: relative; */
+    background-color: yellow;
+    border-radius:50%;
+    padding:5px;
+}
+.span{
+    position: relative;
 }

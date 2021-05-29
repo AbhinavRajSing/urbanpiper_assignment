@@ -16,7 +16,7 @@ function App() {
             <HomePage />
           </Route>
 
-          <Route path="/person/:id">
+          <Route path="/person/:name" exact>
             <Person />
           </Route>
 
