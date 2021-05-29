@@ -5,7 +5,6 @@
 To create this following Tech stack is used by contributors:
 * **HTML**
 * **CSS**
-* **ReactJS**
 
 # Libraries:
 * **Axios**
@@ -30,4 +29,4 @@ To create this following Tech stack is used by contributors:
 * The project will open on browser on the "localhost:3000" or some other port number
 
 # Link to the deployed project:
-[Project](https://urbanstarwars-abhinavrajsing.vercel.app/)
+[Click to go to the Project](https://urbanstarwars-abhinavrajsing.vercel.app/)
