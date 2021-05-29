@@ -14,4 +14,4 @@ To create this following Tech stack is used by contributors:
 
 
 # Screenshots:
-![about image](Screen Shot 2021-05-30 at 1.47.39 AM.png)
+
