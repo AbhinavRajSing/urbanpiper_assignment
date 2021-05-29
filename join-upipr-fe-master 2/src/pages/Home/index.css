@@ -1,6 +1,6 @@
 .search-input {
-    width: 400px;
-    padding: 16px 24px;
+    width: 250px;
+    /* padding: 16px 24px; */
     border-radius: 25px;
     border: 0;
     outline: 0;
@@ -10,10 +10,12 @@
     background: #2d2f30;
     color: #f2f2f2;
     /* position: absolute; */
+    /* margin:auto */
 }
 
 .logo {
     text-align: center;
+    margin-top: 150px;
     margin-bottom: 35px;
 }
 
@@ -21,10 +23,12 @@
     width: 200px;
 }
 .inputicons{
-    /* position: relative; */
+    position: relative;
     background-color: yellow;
     border-radius:50%;
     padding:5px;
+    color:black;
+    margin: 0px 0px 0px 100px
 }
 .span{
     position: relative;
@@ -43,21 +47,97 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    top:-18px
+    top:-18px;
+    /* border:1px solid white */
 }
-.dropdata:hover{
-    background-color: rgb(255,235,1);
-    color:black
-}
-.dropdata p{
-    text-decoration: none;
-}
+
 .wrapper{
-    display:"flex"
+    display:flex;
+    width: 400px;
+    padding: 16px 24px;
+    border-radius: 25px;
+    border: 0;
+    outline: 0;
+
+    font-size: 16px;
+
+    background: #2d2f30;
+    color: #f2f2f2;
+    /* border:1px solid red */
 }
 .clear{
     color: white;
+    position: relative;
+    margin: 0px 0px 0px 150px
 }
 .clear:hover{
     cursor: pointer;
 }
+
+.names:hover{
+    background-color:rgb(255,235,1) ;
+    color:black;
+}
+.names{
+    /* border:1px solid red; */
+    width:400px;
+    padding: 16px 24px;
+    color:white;
+    display:flex;
+    justify-content: space-between;
+}
+.unknown{
+    border-top:dotted 3px blue;
+    border-right:dotted 3px red;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 1s linear infinite;
+    margin: 0px -120px 0px 125px
+}
+@keyframes spin {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg)
+    }
+}
+.dropbox div{
+    width:100%;
+    color:rgb(202, 202, 202);
+    padding: 16px 24px;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media only screen and (max-width: 650px){
+    
+
+    .logo{
+        margin-top: 100px;
+    }
+    .wrapper{
+        width:200px
+    }
+    .search-input {
+        width: 100%
+    }
+    .dropbox{
+        width:200px;
+        max-height: 300px;
+    }
+    .unknown{
+        border-top:dotted 3px blue;
+        border-right:dotted 3px red;
+        border-radius: 50%;
+        width: 30%;
+        height: 30%;
+        animation: spin 1s linear infinite;
+        margin: 0px -120px 0px 125px
+    }
+}
+

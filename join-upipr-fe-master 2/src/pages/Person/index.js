@@ -18,13 +18,17 @@ function Person() {
   }
 
   return (
-    <div className="person">
-      <p>{data.name}</p>
-      <p>{data.birth_year}</p>
-      <p>{data.hair_color}</p>
-      <p>{data.height}</p>
-      <p>{data.mass}</p>
+    
+      <div className="person">
+        <div className="persondata">
+          <h1 className="datas">Name: {data.name}</h1>
+          <h1 className="datas">Birth Year: {data.birth_year}</h1>
+          <h1 className="datas">Hair Color: {data.hair_color}</h1>
+          <h1 className="datas">Height:  {data.height}</h1>
+          <h1 className="datas">Mass: {data.mass}</h1>
+        </div>
     </div>
+    
   );
 }
 

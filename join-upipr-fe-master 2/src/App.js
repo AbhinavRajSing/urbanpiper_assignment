@@ -8,7 +8,9 @@ import './App.css';
 
 function App() {
   return (
-    <div className="app">
+    <div className="app stars">
+     <div className="twinkling">
+      <div className="clouds">
       <Router>
         <Switch>
 
@@ -26,6 +28,8 @@ function App() {
 
         </Switch>
       </Router>
+    </div>
+    </div>
     </div>
   );
 }
