@@ -29,3 +29,35 @@
 .span{
     position: relative;
 }
+.dropbox{
+    background: #2d2f30;
+    border-bottom-left-radius:25px ;
+    border-bottom-right-radius:25px ;
+    width: 400px;
+    max-height: 400px;
+    overflow: auto;
+    text-decoration: none;
+    position: relative;
+    padding: 0px 24px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top:-18px
+}
+.dropdata:hover{
+    background-color: rgb(255,235,1);
+    color:black
+}
+.dropdata p{
+    text-decoration: none;
+}
+.wrapper{
+    display:"flex"
+}
+.clear{
+    color: white;
+}
+.clear:hover{
+    cursor: pointer;
+}
