@@ -1,21 +1,30 @@
 .search-input {
-    width: 250px;
-    /* padding: 16px 24px; */
+    width: 350px;
+    padding: 16px 0px;
     border-radius: 25px;
     border: 0;
     outline: 0;
 
     font-size: 16px;
-
     background: #2d2f30;
     color: #f2f2f2;
     /* position: absolute; */
     /* margin:auto */
+    
+}
+
+.outer{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .logo {
     text-align: center;
-    margin-top: 150px;
+    /* margin-top: 150px; */
     margin-bottom: 35px;
 }
 
@@ -23,51 +32,47 @@
     width: 200px;
 }
 .inputicons{
-    position: relative;
+    /* position: relative; */
     background-color: yellow;
     border-radius:50%;
     padding:5px;
     color:black;
     margin: 0px 0px 0px 100px
 }
-.span{
-    position: relative;
-}
+
 .dropbox{
     background: #2d2f30;
-    border-bottom-left-radius:25px ;
-    border-bottom-right-radius:25px ;
-    width: 400px;
-    max-height: 400px;
-    overflow: auto;
-    text-decoration: none;
-    position: relative;
-    padding: 0px 24px;
-    display:flex;
+    width:438px;
+    display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    top:-18px;
-    /* border:1px solid white */
+    max-height:400px;
+    overflow: hidden;
+    padding:0 10px 0 0;
+    margin-top: -12px;
+    overflow-y:scroll ;
 }
 
 .wrapper{
-    display:flex;
     width: 400px;
-    padding: 16px 24px;
-    border-radius: 25px;
-    border: 0;
-    outline: 0;
+    padding: 0px 24px;
 
+    height: fit-content;
+    border-radius: 15px;
+
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     font-size: 16px;
+    z-index: 1;
 
     background: #2d2f30;
     color: #f2f2f2;
-    /* border:1px solid red */
+    /* border:2px solid rgb(255,235,1) */
 }
 .clear{
     color: white;
-    position: relative;
+    /* position: relative; */
     margin: 0px 0px 0px 150px
 }
 .clear:hover{
@@ -108,11 +113,6 @@
     color:rgb(202, 202, 202);
     padding: 16px 24px;
 }
-.main{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
 @media only screen and (max-width: 650px){
     
@@ -127,17 +127,64 @@
         width: 100%
     }
     .dropbox{
-        width:200px;
+        width:237px;
         max-height: 300px;
     }
     .unknown{
-        border-top:dotted 3px blue;
-        border-right:dotted 3px red;
-        border-radius: 50%;
-        width: 30%;
-        height: 30%;
-        animation: spin 1s linear infinite;
         margin: 0px -120px 0px 125px
+    }
+    .outer{
+        height: auto;
+    }
+    .rescard{
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        margin:-10px 0;
+        height: fit-content;
     }
 }
 
+.rescard{
+    display:flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    /* margin:-100; */
+    /* height: 60px; */
+    width:400px;
+    /* border:1px solid green; */
+    padding:0;
+    z-index: 3;
+
+
+}
+.rescard div:nth-child(2){
+    text-align: right;
+    /* border:1px solid blue; */
+    width:20%;
+    color:grey;
+    font-size: 14px;
+    padding:0;
+    margin-right: 40px;
+}
+.rescard div:nth-child(1){
+    width:60%;
+    /* margin-left: -10px; */
+    /* border:1px solid white; */
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+    padding:0
+}
+.rescard div:nth-child(1) span:nth-child(1){
+    font-weight: 600 ;
+    /* border:1px solid red; */
+    padding:0
+}
+
+.rescard div:nth-child(1) span:nth-child(2){
+    font-weight: 400 ;
+    font-size: 12px;
+    color:grey;
+    padding:0
+}

@@ -29,10 +29,12 @@ function fetchData(val){
 let x
 function debounce(e){
   let {value} = e.target
-  x && clearTimeout(x)
+  if(e.keyCode !== 40 && e.keyCode !== 38 && e.keyCode !==13){
+    x && clearTimeout(x)
   x=setTimeout(()=>{
     fetchData(value)
   },500)
+  }
 }
 
 
@@ -61,22 +63,34 @@ const handleClear=(e)=>{
 
 
   return (
-    <div>
+    <div className="outer">
       <div className="logo">
         <img src={logo} alt="Star Wars Logo" />
       </div>
       <div onKeyUp={(e)=>keyMovement(e)} className="main">
         <div className="wrapper">
-          <input className="search-input" placeholder="Search by name" onChange={(e)=>{debounce(e);setQ(e.target.value)}} value={q}/>
+          <input className="search-input" placeholder="Search by name" onChange={(e)=>{setQ(e.target.value)}} onKeyUp={(e)=>debounce(e)} value={q}/>
           {load && <div className="unknown"></div>}
           <span className="span">{!q ?<FaSearch className="inputicons"/>:
           <span className="clear" onClick={(e)=>handleClear(e)}>x</span>}</span>
         </div>
         
-        <div className="dropbox" >{
+        <div className="dropbox" style={data.length>0?{paddingTop:"10px"}:null} >{
           data?.map((elm,i)=>
             ( 
-              <div style = {active === i? {backgroundColor:"yellow", color:"#110B0B"}: null}  onClick = {()=> history.push(`/person/${elm.name}`)}>{elm.name}</div>
+              <div style = {active === i? {backgroundColor:"yellow", color:"#110B0B"}: null}  className="rescard" onClick = {()=> history.push(`/person/${elm.name}`)}>
+                <div>
+                  <span>
+                    {elm.name}
+                  </span>
+                  <span>
+                    {elm.birth_year}
+                  </span>
+                </div>
+                <div>
+                  {elm.gender}
+                </div>
+              </div>
             )
           )
         }</div>
